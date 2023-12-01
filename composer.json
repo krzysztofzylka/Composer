@@ -1,0 +1,21 @@
+{
+    "name": "krzysztofzylka/composer",
+    "description": "Composer manager",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Krzysztofzylka\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Krzysztof Zylka",
+            "email": "krzysztofzylka@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    }
+}
