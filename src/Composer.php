@@ -8,11 +8,18 @@ class Composer
     /**
      * Require package
      * @param string $packageName
+     * @param string|null $cdPath
      * @return false|string
      */
-    public static function requirePackage(string $packageName)
+    public static function requirePackage(string $packageName, ?string $cdPath = null)
     {
-        $command = 'composer require ' . $packageName;
+        $command = '';
+
+        if (!is_null($cdPath)) {
+            $command .= 'cd ' . $cdPath . '; ';
+        }
+
+        $command .= 'composer require ' . $packageName;
 
         ob_start();
 
